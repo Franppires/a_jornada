@@ -9,4 +9,4 @@ Participe https://www.youtube.com/watch?v=o02PIFTlgPk.
 * criando novo projeto 
 * metodo map 
 * requisição api 
-
+* useState
