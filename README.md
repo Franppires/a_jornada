@@ -5,3 +5,8 @@ sempre mostrando como o conhecimento é aplicado na prática.
 Ajudar a conseguir aquela primeira vaga como desenvolvedor junior.
 
 Participe https://www.youtube.com/watch?v=o02PIFTlgPk.
+
+* criando novo projeto 
+* metodo map 
+* requisição api 
+
