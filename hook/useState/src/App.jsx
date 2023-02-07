@@ -7,7 +7,7 @@ function App() {
   const [valueInput, setValueInput] = useState('')
 
   const add = () => {
-    setCount(count + 1) 
+    setCount((count) => count + 1) 
   }
 
   const onChangeInput = (event) => { 

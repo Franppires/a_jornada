@@ -11,3 +11,4 @@ Participe https://www.youtube.com/watch?v=o02PIFTlgPk.
 * requisição api 
 * useState 
 * modal
+* useReducer
