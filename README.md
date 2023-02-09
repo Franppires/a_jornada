@@ -12,3 +12,8 @@ Participe https://www.youtube.com/watch?v=o02PIFTlgPk.
 * useState 
 * modal
 * useReducer
+* axios api, instance e hook personalizado
+* array com reduce 
+* method filter
+
+
