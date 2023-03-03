@@ -47,7 +47,7 @@ const Body = styled.div`
   top: 75px;
   right: 70px;
 `
-const RigthArm = styled.div`
+const RightArm = styled.div`
   height: 10px;
   width: 50px;
   background-color: white;
@@ -65,7 +65,7 @@ const LeftArm = styled.div`
   right: 70px;
   rotate: 30deg;
 `
-const RigthLeg = styled.div`
+const RightLeg = styled.div`
   height: 10px;
   width: 50px;
   background-color: white;
@@ -74,7 +74,6 @@ const RigthLeg = styled.div`
   right: 30px;
   rotate: 30deg;
 `
-
 const LeftLeg = styled.div`
   height: 10px;
   width: 50px;
@@ -85,18 +84,24 @@ const LeftLeg = styled.div`
   rotate: -30deg;
 `
 
-export default function HangmanDrawing() { 
+const bodyParts = [Head, Body, RightArm, LeftArm, RightLeg, LeftLeg ]
+
+interface HangmanDrawingProps { 
+  numberOfGuesses: number;
+}
+
+export default function HangmanDrawing({numberOfGuesses}: HangmanDrawingProps) { 
   return ( 
-    <div style={{
-      position: 'relative',
-      }}
-    >
-      <LeftLeg />
-      <RigthLeg />
+    <div style={{ position: 'relative' }} >
+      {bodyParts.slice(0, numberOfGuesses).map((BodyParty, index) => { 
+        return <BodyParty key={index}/>
+      })}
+      {/* <LeftLeg />
+      <RightLeg />
       <LeftArm />
-      <RigthArm />
+      <RightArm />
       <Body />
-      <Head />
+      <Head /> */}
       <VerticalLineSmall />
       <HorizontalLine />
       <VerticalLine /> 

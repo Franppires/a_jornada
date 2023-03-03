@@ -11,19 +11,27 @@ const Wrapper = styled.div`
 ` 
 const Letter = styled.span`
   border-bottom: 0.1em solid white;
-  margin-bottom: 1.5rem;
+  gap: 2rem;
+  height: 80px;
+  min-width: 50px;
 `
 
-export default function HangmanWord() {
-  const word = 'teste'
-  const guessedLetters = ['s', 't']
+interface HangmanWordProps { 
+  reveal: boolean;
+  word: string;
+  guessedLetters: string[];
+}
+
+export default function HangmanWord({  word, guessedLetters, reveal}: HangmanWordProps) {
 
   return (
     <Wrapper>
       {word.split("").map((letter, index) => (
         <Letter key={index}>
-          <span style={{visibility: guessedLetters.includes(letter) ? 'visible' : 'hidden'}}>
-            {letter}
+          <span style={{
+            visibility: guessedLetters.includes(letter) || reveal ? 'visible' : 'hidden', 
+            color: !guessedLetters.includes(letter) && reveal ? 'red' : 'green'}}>
+              {letter}
           </span>
         </Letter>
       ))}
